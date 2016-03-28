@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIScrollViewAutolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-Vu-AsZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBl-Kw-P2i" userLabel="myContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="721"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-JY-33n">
+                                                <rect key="frame" x="277" y="10" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nde-Cm-7Pr">
+                                                <rect key="frame" x="0.0" y="60" width="600" height="600"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="3If-F6-Sme"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="3If-F6-Sme"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-Ux-VHZ">
+                                                <rect key="frame" x="279" y="680" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89019614459999996" green="0.55686277149999996" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="cAO-JY-33n" firstAttribute="top" secondItem="rBl-Kw-P2i" secondAttribute="top" constant="10" id="Cuv-Hg-fok"/>
+                                            <constraint firstItem="Nde-Cm-7Pr" firstAttribute="top" secondItem="cAO-JY-33n" secondAttribute="bottom" constant="20" id="OQ1-ak-8pF"/>
+                                            <constraint firstItem="Nde-Cm-7Pr" firstAttribute="leading" secondItem="rBl-Kw-P2i" secondAttribute="leading" id="PUu-5f-DAc"/>
+                                            <constraint firstItem="dfk-Ux-VHZ" firstAttribute="centerX" secondItem="rBl-Kw-P2i" secondAttribute="centerX" id="TtM-F0-4iE"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nde-Cm-7Pr" secondAttribute="trailing" id="ap2-iR-iSB"/>
+                                            <constraint firstAttribute="bottom" secondItem="dfk-Ux-VHZ" secondAttribute="bottom" constant="20" id="c2A-Km-d0j"/>
+                                            <constraint firstItem="dfk-Ux-VHZ" firstAttribute="top" secondItem="Nde-Cm-7Pr" secondAttribute="bottom" constant="20" id="q2V-tZ-A54"/>
+                                            <constraint firstItem="cAO-JY-33n" firstAttribute="centerX" secondItem="rBl-Kw-P2i" secondAttribute="centerX" id="ypU-mx-dus"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rBl-Kw-P2i" firstAttribute="leading" secondItem="UVp-Vu-AsZ" secondAttribute="leading" id="BaF-Dj-4vb"/>
+                                    <constraint firstAttribute="bottom" secondItem="rBl-Kw-P2i" secondAttribute="bottom" id="GLA-4l-zJO"/>
+                                    <constraint firstAttribute="trailing" secondItem="rBl-Kw-P2i" secondAttribute="trailing" id="x5H-zp-6tB"/>
+                                    <constraint firstItem="rBl-Kw-P2i" firstAttribute="top" secondItem="UVp-Vu-AsZ" secondAttribute="top" id="yqE-YX-w0v"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="UVp-Vu-AsZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="37a-5F-JI0"/>
+                            <constraint firstItem="rBl-Kw-P2i" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9NR-v8-WDB"/>
+                            <constraint firstItem="Nde-Cm-7Pr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Eir-aK-dNr"/>
+                            <constraint firstAttribute="trailing" secondItem="UVp-Vu-AsZ" secondAttribute="trailing" id="JII-fj-ZxK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UVp-Vu-AsZ" secondAttribute="bottom" id="m87-tJ-pX0"/>
+                            <constraint firstItem="UVp-Vu-AsZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tTE-DF-ta3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
